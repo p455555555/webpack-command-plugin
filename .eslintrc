@@ -1,0 +1,80 @@
+{
+    "parser":  "@typescript-eslint/parser", // 定义ESLint的解析器
+    // 定义文件继承的子规范
+    "extends": [
+        "airbnb",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/recommended",
+        "plugin:import/typescript"
+    ], 
+     // 定义了该eslint文件所依赖的插件
+    "plugins": [
+        "@typescript-eslint",
+        "jest"
+    ],
+    // 指定代码的运行环境
+    "env":{                          
+        "browser": true,
+        "node": true,
+        "jasmine": true,
+        "jest": true,
+        "es6": true
+    },
+    // 指定ESLint可以解析JSX语法
+    "parserOptions": {        
+        "ecmaVersion": 2019,
+        "sourceType": "module",
+        "ecmaFeatures":{
+            "jsx": true
+        }
+    },
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx"],
+            "rules": {
+                "@typescript-eslint/no-unused-vars": [2, { "args": "none" }]
+            }
+        }
+      ],
+    "rules": {
+        "indent": 0,
+        "camelcase": 0,
+        "max-len": 0,
+        "array-callback-return": 0,
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/no-explicit-any": 0,
+        "import/prefer-default-export": 0,
+        "import/no-extraneous-dependencies": [
+        "off",
+            {
+                "devDependencies": [
+                    "site/**",
+                    "tests/**",
+                    "scripts/**",
+                    "**/*.test.ts",
+                    "**/__tests__/*",
+                    "*.config.ts",
+                    "**/*.md"
+                ]
+            }
+        ],
+        "jsx-a11y/no-static-element-interactions": 0,
+        "jsx-a11y/anchor-has-content": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/anchor-is-valid": 0,
+        "comma-dangle": 0,
+        "import/no-cycle": 0,
+        "no-underscore-dangle": 0,
+        // label-has-for has been deprecated
+        // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
+        "jsx-a11y/label-has-for": 0,
+        // for (let i = 0; i < len; i++)
+        "no-plusplus": 0,
+        // https://eslint.org/docs/rules/no-continue
+        // labeledLoop is conflicted with `eslint . --fix`
+        "no-continue": 0,
+        // ban this for Number.isNaN needs polyfill
+        "no-restricted-globals": 0,
+        "max-classes-per-file": 0,
+    }                   
+}
