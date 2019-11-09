@@ -1,7 +1,7 @@
 {
     "name": "webpack-command-plugin",
     "author": "chenjunhong <p455555555@gmail.com>",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Run shell commands before and after webpack builds",
     "keywords": [
         "webpack",
@@ -38,5 +38,13 @@
         "test": "webpack --config ./webpack.test.config.ts",
         "lint": "eslint ./ --fix --ext .ts,.tsx"
     },
+    "bugs": {
+        "url": "https://github.com/p455555555/webpack-command-plugin/issues"
+    },
+    "homepage": "https://github.com/p455555555/webpack-command-plugin",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/p455555555/webpack-command-plugin.git"
+      },
     "license": "MIT"
 }

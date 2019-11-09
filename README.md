@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/webpack-command-plugin.svg)](https://badge.fury.io/js/webpack-command-plugin)
+
 # Webpack Command Plugin
 
 这个是[WebpackShellPlugin](https://github.com/1337programming/webpack-shell-plugin)的TypeScript重构版，以webpack4新hooks API为基础重构,API用法保持不变.
